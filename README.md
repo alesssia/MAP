@@ -2,10 +2,21 @@
 
 Thanks to the increased cost-effectiveness of high-throughput technologies, the number of studies focusing on microorganisms (bacteria, archaea, microbial eukaryotes, fungi, and viruses) and on their connections with human health and diseases has surged, and, consequently, a plethora of approaches and software has been made available for their study, making it difficult to select the best methods and tools. 
 
-Here we present a pipeline that, starting from the raw sequencing data and having a strong focus on quality control, allows the data processing up to the generation of the to the functional annotation. Software have been selected based on their performances both in terms of quality of the results and computational requirements, aiming at providing an efficient pipeline that can be routinely used in clinical research. 
+MAP *(Metagenomic Analysis Pipeline)* is a pipeline that, starting from the raw sequencing data and having a strong focus on quality control, allows the data processing up to the generation of the to the functional binning and profiling. Software have been selected based on their performances both in terms of quality of the results and computational requirements, aiming at providing an efficient pipeline that can be routinely used in clinical research. 
 
-The Metagenomic Analysis Pipeline (MAP) is a command-line bash script. It is currently at version 0.9.1, released on
+MAP is a command-line bash script. It is currently at version 0.9.1, released on
 April 7th, 2017. It is compatible with Unix, Linux, and Mac OS operating systems.
+
+
+## Table of contents
+
+- [The MAP workflow](#the-map-workflow)
+- [Dependencies](#dependencies)
+- [Other requirements](#other-requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Example](#example)
+- [Acknowledgement](#acknowledgement)
 
 ## The MAP workflow
 
@@ -16,7 +27,7 @@ The image above depicts the key steps in the analysis of a metagenomic sample. W
 Specifically, the QC (green block, performed by means of several tools from the BBmap suite), allows de-duplication, trimming, and decontamination of metagenomics sequences, and each of these steps is accompanied by the visualisation of the data quality (orange block, performed by means of FastQC). The QC is followed by taxonomic binning and profiling (pink block). The taxonomic binning and profiling is performed by means of MetaPhlAn2, which uses clade-specific markers to both detect the organisms present in a microbiome sample and to estimate their relative abundance.
 
 
-## Software requirements
+## Dependencies
 
 - fastQC v0.11.2+ ([http://www.bioinformatics.babraham.ac.uk/projects/fastqc](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/))
 - BBsuite v36.92+ ([https://sourceforge.net/projects/bbmap](https://sourceforge.net/projects/bbmap/))
@@ -79,7 +90,7 @@ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR011/ERR011089/ERR011089_1.fastq.gz
 wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR011/ERR011089/ERR011089_2.fastq.gz
 ```
 
-For the sake of simplicity, we suppose that they are downloaded in a folder called `data`, located in within the installation folder. This folder will also be our working directory, consequently, we will set the following parameters in the `MAP_parameter.sh` file:
+For the sake of simplicity, we suppose that they are downloaded in a folder called `data`, located within the installation folder. This folder will also be our working directory, consequently, we will set the following parameters in the `MAP_parameter.sh` file:
 
 ```
 WORKINGDIR="./MAP/data" 
