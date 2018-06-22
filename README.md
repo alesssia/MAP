@@ -4,8 +4,10 @@ Thanks to the increased cost-effectiveness of high-throughput technologies, the 
 
 MAP *(Metagenomic Analysis Pipeline)* is a pipeline that, starting from the raw sequencing data and having a strong focus on quality control, allows the data processing up to the generation of the to the functional binning and profiling. Software have been selected based on their performances both in terms of quality of the results and computational requirements, aiming at providing an efficient pipeline that can be routinely used in clinical research. 
 
-MAP is a command-line bash script. It is currently at version 0.9.1, released on
-April 7th, 2017. It is compatible with Unix, Linux, and Mac OS operating systems.
+MAP is a command-line bash script. It is currently at version 0.9.1, released on April 7th, 2017. It is compatible with Unix, Linux, and Mac OS operating systems.
+
+## :warning: Warning :warning:
+**MAP is a proof-of-concept analysis pipeline. If you landed here while looking for a production-ready metagenomics analysis pipeline, please have a look to [YAMP](https://github.com/alesssia/YAMP), a containerised workflow enabling reproducibility in metagenomics research ([https://github.com/alesssia/YAMP](https://github.com/alesssia/YAMP)).**
 
 
 ## Table of contents
